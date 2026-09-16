@@ -1,1 +1,253 @@
 
+/* =========================
+   DESIGN TOKENS
+========================= */
+
+:root {
+    --cor-principal: #14532d;
+    --cor-secundaria: #22c55e;
+    --cor-fundo: #f4f7f5;
+    --cor-superficie: #ffffff;
+    --cor-texto: #17231b;
+    --cor-texto-claro: #ffffff;
+    --cor-borda: #cbd5cf;
+
+    --fonte-principal: Arial, Helvetica, sans-serif;
+
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+
+    --raio: 0.5rem;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--fonte-principal);
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    padding: var(--espaco-2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav > a {
+    color: var(--cor-texto-claro);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
+    padding: var(--espaco-4) 0;
+}
+
+section,
+article {
+    margin-bottom: var(--espaco-4);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espaco-2);
+}
+
+.card {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: var(--espaco-3);
+}
+
+.card h2 {
+    color: var(--cor-principal);
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-3);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    font: inherit;
+}
+
+button {
+    min-height: 2.75rem;
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: var(--raio);
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* =========================
+   FOCO - ACESSIBILIDADE
+========================= */
+
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 3px solid #facc15;
+    outline-offset: 2px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: var(--espaco-3);
+}
+
+/* =========================
+   BREAKPOINT 1
+========================= */
+
+@media (min-width: 600px) {
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: var(--espaco-3);
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+/* =========================
+   BREAKPOINT 2
+========================= */
+
+@media (min-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    main {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
