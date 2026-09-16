@@ -1,1 +1,58 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Fit - Sobre</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Navegação principal">
+            <a href="index.html">Academia Fit</a>
+
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="alunos.html">Alunos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Sobre a Academia Fit</h1>
+
+            <p>
+                A Academia Fit é um projeto acadêmico desenvolvido
+                para demonstrar conceitos de programação web.
+            </p>
+
+            <h2>Nossa proposta</h2>
+
+            <p>
+                O objetivo do projeto é apresentar uma página
+                simples para gerenciamento e apresentação
+                de informações de uma academia.
+            </p>
+
+            <h2>Serviços</h2>
+
+            <ul>
+                <li>Musculação</li>
+                <li>Treinamento funcional</li>
+                <li>Acompanhamento de alunos</li>
+                <li>Planos de treinamento</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Academia Fit</p>
+    </footer>
+
+</body>
+</html>
